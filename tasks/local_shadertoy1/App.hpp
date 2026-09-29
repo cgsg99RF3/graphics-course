@@ -1,12 +1,13 @@
 #pragma once
 
+#include <etna/Etna.hpp>
 #include <etna/Window.hpp>
 #include <etna/PerFrameCmdMgr.hpp>
 #include <etna/ComputePipeline.hpp>
 #include <etna/Image.hpp>
+#include <glm/glm.hpp>
 
 #include "wsi/OsWindowingManager.hpp"
-
 
 class App
 {
@@ -28,4 +29,7 @@ private:
 
   std::unique_ptr<etna::Window> vkWindow;
   std::unique_ptr<etna::PerFrameCmdMgr> commandManager;
+
+  etna::ComputePipeline pipeline;
+  etna::Image image;
 };
